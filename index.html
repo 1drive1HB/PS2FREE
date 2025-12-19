@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PS2 Portable Pack</title>
+  <meta name="description" content="Portable PS2 emulator for Windows. Copy to USB, run anywhere.">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/ps2-button.css">
+  <link rel="stylesheet" href="./css/layout.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="wrap">
+    <section class="hero" id="download">
+      <div class="card hero-card">
+        <div class="kicker">Portable PS2 emulator + utilities</div>
+        <h3>Copy to USB. Run anywhere.</h3>
+        <p class="lead">Everything is preconfigured. Just select your games folder and connect a controller. <b>Play PS2 games on your PC.</b></p>
+        
+        <div class="cta-row">
+          <button type="button" class="btn-ps2" id="megaLink">
+            <strong class="btn-ps2-content">Download PS2 Portable</strong>
+            <div id="ps2-stars-container">
+              <div id="ps2-stars"></div>
+            </div>
+            <div id="ps2-glow">
+              <div class="ps2-circle"></div>
+              <div class="ps2-circle"></div>
+              <div class="ps2-circle"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="card side-card">
+        <h2>Quick info</h2>
+        <ul class="list">
+          <li>Windows 10/11 (64-bit)</li>
+          <li>Controller: USB or Bluetooth</li>
+          <li>Games: <code>.iso</code> format</li>
+        </ul>
+        <div class="hr"></div>
+        <h2>Default folders</h2>
+        <ul class="list">
+          <li><code>pcsx2-qtPortable\</code></li>
+          <li><code>ps2Games\</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" id="howto">
+      <div class="card">
+        <h2>How to use</h2>
+        <ol class="steps">
+          <li>Download and extract the pack.</li>
+          <li>Put games in <code>ps2EMULATOR_PORTABLE_PC_WIN\ps2Games\</code>.</li>
+          <li>Run <code>pcsx2-qtPortable\pcsx2-qt.exe</code>.</li>
+          <li>If game list is empty: <b>Settings → Game List → Add Game Directory</b>.</li>
+          <li>Select <code>ps2Games</code> folder and click <b>Select Folder</b>.</li>
+          <li>Connect controller and launch a game.</li>
+        </ol>
+        <div class="tip">Tip: On USB, if the drive letter changes, re-select the <code>ps2Games</code> folder once.</div>
+      </div>
+
+      <div class="card">
+        <h2>Tools included</h2>
+        <ul class="list">
+          <li><b>PCSX2</b> portable build</li>
+          <li><b>myMC</b> memory card tool</li>
+          <li>Extra links in <code>MAIN_Links.txt</code></li>
+        </ul>
+        <div class="hr"></div>
+        <h2>Import save files</h2>
+        <p class="lead2">Use myMC to import downloaded saves into memory card files.</p>
+        <a class="link-btn" href="https://www.youtube.com/watch?v=7dINAJPc9aQ" target="_blank" rel="noopener">
+          <span class="icon">▶</span> Watch tutorial
+        </a>
+      </div>
+    </section>
+
+    <section id="resources">
+      <h2 class="section-title">Resources</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Download games</h3>
+          <ul class="list">
+            <li><a class="link" href="https://vimm.net/vault/PS2" target="_blank" rel="noopener">Vimm's Lair (PS2 vault)</a></li>
+            <li><a class="link" href="https://www.emuparadise.me/" target="_blank" rel="noopener">Emuparadise</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Download saves</h3>
+          <ul class="list">
+            <li><a class="link" href="https://gamefaqs.gamespot.com/ps2" target="_blank" rel="noopener">GameFAQs (PS2 saves)</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Video guides</h3>
+          <ul class="list">
+            <li><a class="link" href="https://www.youtube.com/watch?v=7dINAJPc9aQ" target="_blank" rel="noopener">Import saves tutorial</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Documentation</h3>
+          <ul class="list">
+            <li><a class="link" href="./html/docs.html">Setup guide (HTML)</a></li>
+            <li><a class="link" href="./html/burning.html">Disc burning guide</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2025 MP • PS2 Portable Pack</span>
+      <a href="#download" class="back-top" title="Back to top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

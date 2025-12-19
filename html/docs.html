@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Setup Guide - PS2 Portable Pack</title>
+  <meta name="description" content="Complete setup guide for PS2 Portable Pack">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="wrap docs-main">
+    <article class="docs-content">
+      <h1>Portable PS2 Emulator — Setup Guide</h1>
+      <p class="intro">Copy the folders to any USB/PC and run. Everything is already pre-configured—just point it to your games folder and connect a controller.</p>
+
+      <section class="doc-section">
+        <h2>Folder layout (keep names)</h2>
+        <ul class="path-list">
+          <li><code>ps2EMULATOR_PORTABLE_PC_WIN\</code> → main portable package</li>
+          <li><code>ps2EMULATOR_PORTABLE_PC_WIN\pcsx2-qtPortable\pcsx2-qt.exe</code> → emulator (run this)</li>
+          <li><code>ps2EMULATOR_PORTABLE_PC_WIN\ps2Games\</code> (or external <code>D:\PS2_games\</code>) → put game ISOs here</li>
+          <li><code>ps2EMULATOR_PORTABLE_PC_WIN\pcsx2-qtPortable\mymc-alpha-2.7\mymc.exe</code> → tool to import saves</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>Quick start (3 steps)</h2>
+        <ol class="doc-steps">
+          <li>Copy <code>ps2EMULATOR_PORTABLE_PC_WIN\</code> to your USB drive (or to <code>D:\PS2EMU\</code>).</li>
+          <li>Put your PS2 games (<code>.iso</code>, sometimes <code>.bin/.cue</code>) into:
+            <ul>
+              <li>Portable folder: <code>ps2EMULATOR_PORTABLE_PC_WIN\ps2Games\</code></li>
+              <li>OR external folder: <code>D:\PS2_games\</code></li>
+            </ul>
+          </li>
+          <li>Run: <code>ps2EMULATOR_PORTABLE_PC_WIN\pcsx2-qtPortable\pcsx2-qt.exe</code></li>
+        </ol>
+      </section>
+
+      <section class="doc-section">
+        <h2>Add the games folder inside PCSX2</h2>
+        <p>If you don't see games after starting PCSX2:</p>
+        <ol class="doc-steps">
+          <li>Open <b>Settings → Game List</b>.</li>
+          <li>Click <b>Add Game Directory</b>.</li>
+          <li>Choose ONE folder:
+            <ul>
+              <li><code>...\ps2EMULATOR_PORTABLE_PC_WIN\ps2Games\</code> (if you keep games inside the package), OR</li>
+              <li><code>D:\PS2_games\</code> (if you keep games outside)</li>
+            </ul>
+          </li>
+          <li>Click <b>Select Folder</b>.</li>
+        </ol>
+        <div class="note">
+          <b>Tip:</b> In the folder picker, click <b>This PC</b> → choose the drive letter (USB might be <code>E:</code> or <code>F:</code>) → open the folder → <b>Select Folder</b>.
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2>Controller (USB or Bluetooth)</h2>
+        <ul>
+          <li><b>USB:</b> plug it in, then start PCSX2.</li>
+          <li><b>Bluetooth:</b> pair it in Windows first, then start PCSX2.</li>
+          <li>Works with PC controllers and PS4/PS5 controllers.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>Saves (memory card only)</h2>
+        <p>This pack does NOT cover save states (those are handled by your separate web/save-state app).</p>
+        <p>For normal "PS2 memory card saves", use <b>myMC</b> to insert saves into a memory card file:</p>
+        <ul>
+          <li>Run: <code>ps2EMULATOR_PORTABLE_PC_WIN\pcsx2-qtPortable\mymc-alpha-2.7\mymc.exe</code></li>
+          <li>Use it to import downloaded save files into your PS2 memory card image (so the game can load it normally).</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>Useful links</h2>
+        <p>More info is included here:</p>
+        <ul>
+          <li><code>ps2EMULATOR_PORTABLE_PC_WIN\pcsx2-qtPortable\MAIN_Links.txt</code></li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>Online resources</h2>
+        
+        <h3>Download games</h3>
+        <a href="https://vimm.net/vault/PS2" target="_blank" rel="noopener" class="resource-link">
+          <strong>Vimm's Lair</strong>
+          <span class="desc">— Complete PS2 vault (7z format)</span>
+        </a>
+        <a href="https://www.emuparadise.me/" target="_blank" rel="noopener" class="resource-link">
+          <strong>Emuparadise</strong>
+          <span class="desc">— ROMs, ISOs & game finder</span>
+        </a>
+
+        <h3>Download saves</h3>
+        <a href="https://gamefaqs.gamespot.com/ps2" target="_blank" rel="noopener" class="resource-link">
+          <strong>GameFAQs</strong>
+          <span class="desc">— PS2 save files database</span>
+        </a>
+
+        <h3>Video tutorials</h3>
+        <a href="https://www.youtube.com/watch?v=7dINAJPc9aQ" target="_blank" rel="noopener" class="resource-link">
+          <strong>How to Import Save Files on PCSX2</strong>
+          <span class="desc">— Full guide using myMC</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=NRUwAO1MwOg" target="_blank" rel="noopener" class="resource-link">
+          <strong>Easy PCSX2 Portable Guide</strong>
+          <span class="desc">— Alternative setup method</span>
+        </a>
+      </section>
+
+      <div class="doc-footer">
+        <a href="../index.html" class="btn">← Back to main page</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2025 MP • PS2 Portable Pack</span>
+      <a href="#" class="back-top" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PS2 Disc Burning Guide</title>
+  <meta name="description" content="Complete guide for burning PS2 backup discs">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="wrap docs-main">
+    <article class="docs-content">
+      <h1>PS2 Disc Burning Guide</h1>
+      
+      <div class="note">
+        <b>System Context:</b> This procedure has been verified on a <b>PS2 Slim (SCPH-75004)</b>. While PS2 Fat models often have higher tolerance for various media, Slim models require strict adherence to these settings for successful reads.
+      </div>
+
+      <section class="doc-section">
+        <h2>Resources</h2>
+        <ul>
+          <li><b>PS2 ISO Archive:</b> <a href="https://vimm.net/vault/PS2" target="_blank" rel="noopener">Vimm's Lair</a></li>
+          <li><b>Community Support:</b> <a href="https://www.reddit.com/r/ps2/" target="_blank" rel="noopener">r/PS2 Subreddit</a></li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>1. Required Tools</h2>
+        <p>
+          <a href="https://www.imgburn.com/index.php?act=download" target="_blank" rel="noopener" class="tool-link">
+            ImgBurn (Burning Software)
+          </a>
+          <a href="https://www.gburner.com/" target="_blank" rel="noopener" class="tool-link">
+            gBurner (Format Conversion - Optional)
+          </a>
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2>2. Media Requirements</h2>
+        <ul>
+          <li><b>Format:</b> DVD-R 4.7GB
+            <ul>
+              <li><i>Strict Requirement:</i> Do not use DVD+R or DVD-RW.</li>
+            </ul>
+          </li>
+          <li><b>Recommended Brands:</b> Verbatim, Sony, TDK.</li>
+        </ul>
+        
+        <div class="note">
+          <b>Tested on PS2 Fat:</b> MODEL: SCPH-50004
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2>3. Burning with ImgBurn</h2>
+        
+        <h3>A. Initial Setup</h3>
+        <ol class="doc-steps">
+          <li>Launch <b>ImgBurn</b>.</li>
+          <li>Select <b>Write image file to disc</b> from the main menu.</li>
+        </ol>
+
+        <h3>B. Load Image File</h3>
+        <ol class="doc-steps">
+          <li>Click the <b>Browse</b> button (folder icon).</li>
+          <li>Navigate to and select your target <code>.ISO</code> file.</li>
+        </ol>
+
+        <div class="note">
+          <b>Settings:</b><br>
+          Tools → "Write" (Must be selected)<br>
+          Speed: x4<br>
+          Copies: 1
+        </div>
+
+        <h3>C. Burn Settings</h3>
+        <p><i>These settings are critical for PS2 Slim compatibility.</i></p>
+        <ul>
+          <li><b>Write Speed:</b> Set to <b>4x</b>.
+            <ul>
+              <li><i>Note:</i> 4x provides maximum stability. Use 8x only if 4x is unsupported by your media.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>D. Burn Process</h3>
+        <ol class="doc-steps">
+          <li>Insert a blank <b>DVD-R</b>.</li>
+          <li>Click the large <b>Write</b> button.
+            <ul>
+              <li><b>Verify:</b> Checked (Ensures data integrity).</li>
+              <li><b>Eject Tray:</b> Checked (Eject disc after completion).</li>
+              <li><b>Close Program:</b> Checked (Exit after completion).</li>
+            </ul>
+          </li>
+          <li>Allow the process to verify and finish. Approximate 5-15 min for one .ISO range between 1GB - 4.7GB.</li>
+          <li>After auto EJECT (because we enabled <b>Eject Tray</b> + <b>Close Program</b>), DVD-R is now READY for use!</li>
+        </ol>
+      </section>
+
+      <section class="doc-section">
+        <h2>4. Troubleshooting & Conversion</h2>
+        
+        <h3>Conversion: BIN to ISO</h3>
+        <p><i>Perform this step only if the game exists as a BIN/CUE file or if the PS2 refuses to read the standard burn.</i></p>
+
+        <h4>Using gBurner:</h4>
+        <ol class="doc-steps">
+          <li>Launch <b>gBurner</b>.</li>
+          <li>Navigate to <b>Tools → Convert Image</b>.</li>
+          <li>Select your source <code>.BIN</code> file.</li>
+          <li>Set output format to <b>Standard ISO Image (.ISO)</b>.</li>
+          <li>Select your destination folder and click <b>Convert</b>.</li>
+          <li>Once converted, burn the new <code>.ISO</code> using ImgBurn (refer to Section 3).</li>
+        </ol>
+
+        <div class="note">
+          <b>Note:</b> Retain original BIN/CUE files until the new ISO is tested and working.
+        </div>
+
+        <h3>Common Read Errors & Solutions</h3>
+        <p>If the console fails to load the disc, follow this diagnostic hierarchy:</p>
+        <ol class="doc-steps">
+          <li><b>Speed Check:</b> Re-burn the image at <b>4x speed</b>, regardless of previous success at higher speeds.</li>
+          <li><b>Media Verification:</b> Ensure the disc is <b>DVD-R</b>. Do not use DVD+R.</li>
+          <li><b>Format Conversion:</b> If the source was a BIN file, <b>convert to ISO</b> first. This is a known fix for persistent read errors on Slim models.</li>
+          <li><b>Hardware Maintenance:</b> Gently clean the laser lens using a cotton swab and high-percentage isopropyl alcohol.</li>
+          <li><b>System Resources:</b> Avoid using the PC for other tasks during the burning process to prevent buffer underruns.</li>
+        </ol>
+
+        <h3>Additional Notes</h3>
+        <ul>
+          <li><b>Disc Quality:</b> Media brand and dye quality are the primary factors in read success.</li>
+          <li><b>Hardware Variance:</b> A disc that works on a Fat PS2 may not work on a Slim due to different laser tolerances. Always test on the target hardware.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2>PS2 Backup Disc Formats</h2>
+        
+        <h3>Original ISO (PAL/EU)</h3>
+        <ul>
+          <li>1:1 sector-accurate disc dump</li>
+          <li>PAL region (Europe/Australia)</li>
+          <li>File extension: .iso</li>
+          <li>Uncompressed, unmodified</li>
+          <li>Optimal for burning with ImgBurn at 4x speed</li>
+          <li>Maximum compatibility with stock PS2 Slim</li>
+        </ul>
+
+        <h3>ISO File Variations</h3>
+        <ul>
+          <li><b>True 1:1 dumps:</b> Full size (2–4.7 GB), best compatibility</li>
+          <li><b>Rebuilt ISOs:</b> Modified structure, may shrink DVD9→DVD5, reduced compatibility</li>
+          <li><b>Compressed ISOs:</b> Internal compression, .iso extension but incompatible</li>
+        </ul>
+
+        <h3>BIN/CUE Format</h3>
+        <ul>
+          <li>Standard for CD-based PS2 games (blue discs, ~200–700 MB)</li>
+          <li>Includes both .bin (data) and .cue (track layout) files</li>
+          <li>DVD games in .bin format indicate conversion (avoid)</li>
+        </ul>
+
+        <h3>File Identification</h3>
+        <ul>
+          <li>Proper PS2 DVD ISO: 2–4.37 GB, contains SYSTEM.CNF and region-specific executable</li>
+          <li>Proper PS2 CD BIN: 200–700 MB, accompanied by .cue file</li>
+        </ul>
+      </section>
+
+      <div class="doc-footer">
+        <a href="../index.html" class="btn">← Back to main page</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2025 MP • PS2 Portable Pack</span>
+      <a href="#" class="back-top" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

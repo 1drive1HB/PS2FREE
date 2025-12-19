@@ -1,0 +1,158 @@
+.btn-ps2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 3.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5rem;
+  transition: 0.5s;
+  border: double 4px transparent;
+  background-image:
+    linear-gradient(#1a2332, #1a2332),
+    linear-gradient(
+      137.48deg,
+      #00ff00 10%,
+      #0080ff 45%,
+      #2fb8ff 67%,
+      #ff0000 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: 300% 300%;
+  animation: ps2_gradient 6s ease infinite;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.btn-ps2-content {
+  z-index: 2;
+  font-weight: 750;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #e8f4ff;
+  text-shadow:
+    0 0 8px rgba(47,184,255,0.9),
+    0 2px 4px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+}
+
+#ps2-stars-container {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 5rem;
+}
+
+#ps2-glow {
+  position: absolute;
+  display: flex;
+  gap: 1.5rem;
+  width: auto;
+  justify-content: center;
+  z-index: 1;
+}
+
+.ps2-circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2.5rem);
+  animation: ps2_pulse 5s infinite ease-in-out;
+  z-index: 1;
+}
+
+.ps2-circle:nth-of-type(1) { background: rgba(0,255,0,0.7); animation-delay: 0s; }
+.ps2-circle:nth-of-type(2) { background: rgba(0,128,255,0.8); animation-delay: 1.6s; }
+.ps2-circle:nth-of-type(3) { background: rgba(255,0,0,0.7); animation-delay: 3.2s; }
+
+.btn-ps2:hover #ps2-stars-container {
+  z-index: 1;
+  background-color: rgba(26,35,50,0.7);
+}
+
+.btn-ps2:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 30px rgba(0,128,255,0.3);
+}
+
+.btn-ps2:active {
+  border: double 4px #0080ff;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+  transform: scale(1.05);
+}
+
+.btn-ps2:active .ps2-circle { background: rgba(47,184,255,0.9); }
+
+#ps2-stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#ps2-stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: ps2_star_rotate 120s linear infinite;
+  background-image:
+    radial-gradient(circle, #00ff00 1.5px, transparent 1.5px),
+    radial-gradient(circle, #0080ff 1.2px, transparent 1.2px);
+  background-size: 80px 80px, 100px 100px;
+  background-position: 0 0, 40px 40px;
+  opacity: 0.4;
+}
+
+#ps2-stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: ps2_star_move 100s linear infinite;
+  background-image:
+    radial-gradient(circle, #0080ff 1.5px, transparent 1.5px),
+    radial-gradient(circle, #ff0000 1.2px, transparent 1.2px);
+  background-size: 90px 90px, 110px 110px;
+  background-position: 0 0, 45px 45px;
+  opacity: 0.35;
+}
+
+.btn-ps2.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+@keyframes ps2_star_move {
+  from { transform: translateY(0); }
+  to { transform: translateY(-180rem); }
+}
+
+@keyframes ps2_star_rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ps2_gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes ps2_pulse {
+  0% { transform: scale(0.65); opacity: 0.5; }
+  20% { transform: scale(1.1); opacity: 1; }
+  40% { transform: scale(0.65); opacity: 0.5; }
+  100% { transform: scale(0.65); opacity: 0.5; }
+}

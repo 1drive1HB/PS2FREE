@@ -1,0 +1,30 @@
+# Ignore entire dev folder
+dev/
+
+# Ignore environment files anywhere
+*.env
+
+# Ignore specific dev files
+dev/.dev.md
+
+# Local trash folder
+.trash/
+
+# VS Code settings
+.vscode/
+
+# Ignore todo files
+todo.md
+*.todo.md
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# Node / build (if you ever add tooling)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
