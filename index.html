@@ -15,11 +15,16 @@
 
   <main class="wrap">
     <section class="hero" id="download">
-      <div class="card hero-card">
-        <div class="kicker">Portable PS2 emulator + utilities</div>
-        <h3>Copy to USB. Run anywhere.</h3>
-        <p class="lead">Everything is preconfigured. Just select your games folder and connect a controller. <b>Play PS2 games on your PC.</b></p>
-        
+      <div class="card hero-card hero-main-card">
+        <h2>Portable PS2 emulator + utilities</h2>
+        <!-- <h2 class="hero-kicker">Portable PS2 emulator + utilities</h2> -->
+         <p>Copy to USB. Run anywhere.</p>
+        <!-- <p class="hero-title">Copy to USB. Run anywhere.</p> -->
+        <p class="lead hero-lead">
+          Everything is preconfigured. Just select your games folder and connect a controller.
+          <b>Play PS2 games on your PC.</b>
+        </p>
+
         <div class="cta-row">
           <button type="button" class="btn-ps2" id="megaLink">
             <strong class="btn-ps2-content">Download PS2 Portable</strong>
@@ -56,26 +61,56 @@
         <h2>How to use</h2>
         <ol class="steps">
           <li>Download and extract the pack.</li>
-          <li>Put games in <code>ps2EMULATOR_PORTABLE_PC_WIN\ps2Games\</code>.</li>
-          <li>Run <code>pcsx2-qtPortable\pcsx2-qt.exe</code>.</li>
-          <li>If game list is empty: <b>Settings → Game List → Add Game Directory</b>.</li>
-          <li>Select <code>ps2Games</code> folder and click <b>Select Folder</b>.</li>
+          <li>
+            Put games in:
+            <br>
+            <code class="inline-path">ps2EMULATOR_PORTABLE_PC_WIN\ps2Games\</code>
+          </li>
+          <li>
+            Run:
+            <br>
+            <code class="inline-path">pcsx2-qtPortable\pcsx2-qt.exe</code>
+          </li>
+          <li>
+            If game list is empty:
+            <br>
+            <b>Settings → Game List → Add Game Directory</b>.
+          </li>
+          <li>
+            Select
+            <code class="inline-path">ps2Games</code>
+            folder and click <b>Select Folder</b>.
+          </li>
           <li>Connect controller and launch a game.</li>
         </ol>
-        <div class="tip">Tip: On USB, if the drive letter changes, re-select the <code>ps2Games</code> folder once.</div>
+        <div class="tip">
+          Tip: On USB, if the drive letter changes, re‑select the
+          <code>ps2Games</code> folder once.
+        </div>
       </div>
 
       <div class="card">
         <h2>Tools included</h2>
-        <ul class="list">
-          <li><b>PCSX2</b> portable build</li>
-          <li><b>myMC</b> memory card tool</li>
-          <li>Extra links in <code>MAIN_Links.txt</code></li>
+        <ul class="list tools-list">
+          <li>
+            <b>PCSX2</b> portable build:
+            <br>
+            <code class="inline-path">pcsx2-qtPortable\pcsx2-qt.exe</code>
+          </li>
+          <li>
+            <b>myMC</b> memory card tool:
+            <br>
+            <code class="inline-path">pcsx2-qtPortable\mymc-alpha-2.7\mymc-gui.exe</code>
+          </li>
         </ul>
         <div class="hr"></div>
         <h2>Import save files</h2>
-        <p class="lead2">Use myMC to import downloaded saves into memory card files.</p>
-        <a class="link-btn" href="https://www.youtube.com/watch?v=7dINAJPc9aQ" target="_blank" rel="noopener">
+        <p class="lead2">
+          Use <b>myMC</b> app to import downloaded saves into memory card files.
+        </p>
+        <a class="link-btn"
+           href="https://www.youtube.com/watch?v=7dINAJPc9aQ"
+           target="_blank" rel="noopener">
           <span class="icon">▶</span> Watch tutorial
         </a>
       </div>
@@ -87,30 +122,36 @@
         <div class="card">
           <h3>Download games</h3>
           <ul class="list">
-            <li><a class="link" href="https://vimm.net/vault/PS2" target="_blank" rel="noopener">Vimm's Lair (PS2 vault)</a></li>
-            <li><a class="link" href="https://www.emuparadise.me/" target="_blank" rel="noopener">Emuparadise</a></li>
+            <li>
+              <a class="link" href="https://vimm.net/vault/PS2"
+                 target="_blank" rel="noopener">Vimm's Lair (PS2 vault)</a>
+            </li>
+            <li>
+              <a class="link" href="https://www.emuparadise.me/"
+                 target="_blank" rel="noopener">Emuparadise</a>
+            </li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Download saves</h3>
           <ul class="list">
-            <li><a class="link" href="https://gamefaqs.gamespot.com/ps2" target="_blank" rel="noopener">GameFAQs (PS2 saves)</a></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Video guides</h3>
-          <ul class="list">
-            <li><a class="link" href="https://www.youtube.com/watch?v=7dINAJPc9aQ" target="_blank" rel="noopener">Import saves tutorial</a></li>
+            <li>
+              <a class="link" href="https://www.youtube.com/watch?v=7dINAJPc9aQ"
+                 target="_blank" rel="noopener">Import saves tutorial</a>
+            </li>
+            <li>
+              <a class="link" href="https://gamefaqs.gamespot.com/ps2"
+                 target="_blank" rel="noopener">GameFAQs (PS2 saves)</a>
+            </li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Documentation</h3>
           <ul class="list">
-            <li><a class="link" href="html/docs.html">Setup guide (HTML)</a></li>
-            <li><a class="link" href="html/burning.html">Disc burning guide</a></li>
+            <li><a class="link" href="html/docs.html">PS2 PC Setup Guide</a></li>
+            <li><a class="link" href="html/burning.html">Disc burning Guide</a></li>
           </ul>
         </div>
       </div>
@@ -122,7 +163,9 @@
       <span>© 2025 MP • PS2 Portable Pack</span>
       <a href="#download" class="back-top" title="Back to top" aria-label="Back to top">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 15V5M10 5L5 10M10 5L15 10"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>

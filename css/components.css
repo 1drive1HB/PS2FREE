@@ -32,7 +32,7 @@
   background-size:80px 80px,100px 100px;
   background-position:0 0,40px 40px;
   opacity:0.25;
-  animation:topbar_stars_drift_1 100s linear infinite;
+  animation:topbar_stars_drift_1 70s linear infinite;
 }
 
 .topbar-stars::after{
@@ -48,7 +48,7 @@
   background-size:90px 90px,110px 110px;
   background-position:0 0,45px 45px;
   opacity:0.2;
-  animation:topbar_stars_drift_2 120s linear infinite;
+  animation:topbar_stars_drift_2 85s linear infinite;
 }
 
 @keyframes topbar_stars_drift_1{
@@ -117,15 +117,16 @@
   }
 }
 
+/* Brand text (nav) */
 .brand-text .title{
   font-weight:750;
-  /* font-weight:1150; */
   letter-spacing:.4px;
+  font-size:1.1rem;
 }
 
 .brand-text .sub{
   color:var(--muted);
-  font-size:.86rem;
+  font-size:.9rem;
   margin-top:2px;
 }
 
@@ -170,6 +171,25 @@
 
 .side-card{
   background:var(--panel2);
+}
+
+/* Hero text (title + lead) */
+.hero-main-card{
+  position:relative;
+}
+
+.hero-kicker{
+  margin:0 0 .45rem;
+  font-size:1.15rem;
+  font-weight:650;
+}
+
+.hero-title{
+  font-size:1.35rem;
+}
+
+.hero-lead{
+  font-size:.95rem;
 }
 
 /* Buttons */
@@ -462,4 +482,19 @@
   padding-top:1.5rem;
   border-top:1px solid var(--line);
   text-align:center;
+}
+
+/* Compact inline paths for steps + tools (index + docs) */
+.inline-path{
+  display:inline-block;
+  margin-top:.15rem;
+  font-family:"Courier New",monospace;
+  font-size:.9em;
+  padding:0 .35rem;
+  border-radius:4px;
+  background:rgba(0,100,200,0.12);
+}
+
+.tools-list li{
+  margin:.45rem 0;
 }
