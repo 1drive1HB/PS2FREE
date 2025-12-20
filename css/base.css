@@ -29,7 +29,7 @@ body {
     radial-gradient(circle 1000px at 25% 15%, rgba(47,184,255,0.05), transparent),
     radial-gradient(circle 800px at 75% 5%, rgba(11,58,160,0.08), transparent),
     linear-gradient(180deg, rgba(7,10,18,0.5), rgba(7,10,18,0.7)),
-    url("../assets/ps2-background.png");
+    url("../assets/ps2-backgroundOLD.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
