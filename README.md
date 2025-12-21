@@ -26,3 +26,5 @@ Copy to USB, run anywhere—no installation required.
 3. Place game ISOs in `ps2Games/` folder
 4. Run `pcsx2-qtPortable/pcsx2-qt.exe`
 5. Add games folder in emulator settings if needed
+
+also project will have several MEGA links for ps2emu, games.iso, and tools, apps

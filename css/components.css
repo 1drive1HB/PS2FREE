@@ -498,3 +498,36 @@
 .tools-list li{
   margin:.45rem 0;
 }
+
+
+/* FASTER NAV DOTS - Replace existing animations */
+@keyframes topbarstarsdrift1 { 
+    from { transform: translateY(0); }
+    to { transform: translateY(-120px); }
+}
+@keyframes topbarstarsdrift2 { 
+    from { transform: translateY(0) translateX(0); }
+    to { transform: translateY(-140px) translateX(60px); }
+}
+.topbar-stars::before { 
+    animation: topbarstarsdrift1 35s linear infinite !important; 
+}
+.topbar-stars::after { 
+    animation: topbarstarsdrift2 42s linear infinite !important; 
+}
+
+/* Featured Games */
+.game-cover { 
+    position: relative; overflow: hidden; border-radius: 12px;
+}
+.game-cover img { 
+    width: 100%; height: 180px; object-fit: cover; 
+    transition: transform 0.3s ease; display: block;
+}
+.game-cover:hover img { transform: scale(1.05); }
+.game-cover span { 
+    position: absolute; bottom: 1rem; left: 1rem; right: 1rem;
+    color: var(--text); font-weight: 750; text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    background: rgba(7,10,18,0.8); padding: 0.5rem 0.75rem;
+    border-radius: 8px; font-size: 0.95rem;
+}
