@@ -12,25 +12,62 @@
   <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
+  <!-- anchor for true page top -->
+  <div id="top"></div>
+
   <div id="nav-placeholder"></div>
 
   <main class="wrap">
     <!-- Hero -->
     <section class="hero" id="download">
-      <div class="card hero-card hero-main-card">
+      <!-- <div class="card hero-card hero-main-card">
         <h2>Portable PS2 emulator</h2>
         <p>Copy to USB. Run anywhere.</p>
         <p class="lead hero-lead">
           Everything is preconfigured. Just select your games folder and connect a controller.
         </p>
         <p><b>Play PS2 games on your PC.</b></p>
-
+        <div class="hr"></div>
         <div class="cta-row">
-          <button type="button" class="btn-ps2" id="megaPcsx2">
+          <button type="button" class="btn-ps2 disabled" id="megaPcsx2"
+                  title="Owner: set PCSX2 MEGA link in main.js">
             <strong class="btn-ps2-content">Download PS2 Portable</strong>
             <div id="ps2-stars-container">
               <div id="ps2-stars"></div>
             </div>
+            <div id="ps2-glow">
+              <div class="ps2-circle"></div>
+              <div class="ps2-circle"></div>
+              <div class="ps2-circle"></div>
+            </div>
+          </button>
+        </div>
+      </div> -->
+      <div class="card side-card">
+        <h2>Portable PS2 emulator</h2>
+        <p>Copy to USB. Run anywhere.</p>
+
+        <p class="lead hero-lead">
+          Everything is preconfigured. Select your games folder, and connect a controller.
+        </p>
+        <p><b>Play PS2 games on your PC.</b></p>
+
+        <br>
+        <!-- <div class="hr"></div> -->
+
+        <div class="cta-row">
+          <button
+            type="button"
+            class="btn-ps2 disabled"
+            id="megaPcsx2"
+            title="Owner: set PCSX2 MEGA link in main.js"
+          >
+            <strong class="btn-ps2-content">Download PS2 Portable</strong>
+
+            <div id="ps2-stars-container">
+              <div id="ps2-stars"></div>
+            </div>
+
             <div id="ps2-glow">
               <div class="ps2-circle"></div>
               <div class="ps2-circle"></div>
@@ -63,10 +100,10 @@
         <ol class="steps">
           <li>Download and extract the pack.</li>
           <li>Put games in <code class="inline-path">ps2Games/</code></li>
-          <li>Run:<code class="inline-path">pcsx2-qtPortable/pcsx2-qt.exe</code></li>
+          <li>Run<br><code class="inline-path">pcsx2-qtPortable/pcsx2-qt.exe</code></li>
           <li>If game list is empty<br><b>Settings → Game List → Add Game Dir</b></li>
-          <li>Select <code class="inline-path">ps2Games/</code> folder and click <b>Select Folder</b>.</li>
-          <li>Connect controller and launch a game</li>
+          <li>Select <code class="inline-path">ps2Games/</code> folder and click <b>Select Folder</b></li>
+          <li>Connect controller and launch a game.</li>
         </ol>
         <div class="tip">
           <b>Tip:</b> On USB, if the drive letter changes, re‑select the <code>ps2Games/</code> folder once.
@@ -105,6 +142,7 @@
           Watch tutorial...
         </a>
       </div>
+      
     </section>
 
     <!-- Resources -->
@@ -153,7 +191,8 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span>&copy; 2025 MP PS2 Portable Pack</span>
-      <a href="#download" class="back-top" title="Back to top" aria-label="Back to top">
+      <!-- Back to absolute top -->
+      <a href="#top" class="back-top" title="Back to top" aria-label="Back to top">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 15V5M10 5L5 10M10 5L15 10"
                 stroke="currentColor" stroke-width="2"

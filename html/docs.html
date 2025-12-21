@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../css/layout.css">
 </head>
 <body>
+  <div id="top"></div>
+
   <div id="nav-placeholder"></div>
 
   <main class="wrap docs-main">
@@ -64,7 +66,7 @@
           <li>Click <b>Select Folder</b>.</li>
         </ol>
         <div class="note">
-          <b>Tip:</b> In the folder picker, click <b>This PC</b>, choose the drive letter
+          <b>Tip:</b> In the folder picker, click <b>This PC</b>, choose the drive letter <br>
           (USB might be <code>E:/</code> or <code>F:/</code>), open the folder, then click <b>Select Folder</b>.
         </div>
       </section>
@@ -101,21 +103,12 @@
 
               <div class="hr"></div>
 
-              <button type="button" class="btn-ps2 games-mega-btn" id="megaGames">
+              <button type="button"
+                      class="btn-ps2 games-mega-btn disabled"
+                      id="megaGames"
+                      title="Owner: set Games MEGA link in main.js">
                 <strong class="btn-ps2-content">Download games pack (MEGA)</strong>
               </button>
-
-              <h3>Manual downloads</h3>
-              <ul class="list">
-                <li>
-                  <a class="link" href="https://vimm.net/vault/PS2"
-                     target="_blank" rel="noopener">Vimm's Lair PS2 vault</a>
-                </li>
-                <li>
-                  <a class="link" href="https://www.emuparadise.me"
-                     target="_blank" rel="noopener">Emuparadise</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -169,7 +162,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span>&copy; 2025 MP PS2 Portable Pack</span>
-      <a href="#" class="back-top" title="Back to top">
+      <a href="#top" class="back-top" title="Back to top">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 15V5M10 5L5 10M10 5L15 10"
                 stroke="currentColor" stroke-width="2"

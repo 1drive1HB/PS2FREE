@@ -118,7 +118,7 @@
 }
 
 @keyframes logo-pulse {
-  0%,100% {
+  0%, 100% {
     transform: scale(0.95);
     opacity: 0.85;
     filter: drop-shadow(0 0 8px rgba(47, 184, 255, 0.5));
@@ -131,7 +131,6 @@
 }
 
 /* Brand text + nav */
-
 .brand-text .title {
   font-weight: 750;
   letter-spacing: .4px;
@@ -168,7 +167,6 @@
 }
 
 /* Cards */
-
 .card {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -193,13 +191,17 @@
   background: var(--panel2);
 }
 
-/* Hero text */
+/* Hero */
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+}
 
 .hero-main-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* top-align like Quick info */
+  justify-content: flex-start; /* title pinned to top-left */
 }
 
 .hero-kicker {
@@ -217,7 +219,6 @@
 }
 
 /* Buttons */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -289,7 +290,6 @@
 }
 
 /* Lists */
-
 .list,
 .steps {
   margin: .6rem 0 0;
@@ -315,7 +315,6 @@
 }
 
 /* Misc */
-
 .hr {
   height: 1px;
   background: var(--line);
@@ -355,7 +354,6 @@
 }
 
 /* Footer */
-
 .footer {
   margin-top: 2rem;
   padding: 1.5rem 0;
@@ -391,7 +389,6 @@
 }
 
 /* Docs page */
-
 .note {
   margin: 1rem 0;
   padding: .85rem 1rem;
@@ -470,7 +467,6 @@
 }
 
 /* Inline path chips */
-
 .inline-path {
   display: inline-block;
   margin-top: .15rem;
@@ -482,7 +478,6 @@
 }
 
 /* Accordion */
-
 .accordion {
   margin: 1.5rem 0;
 }
@@ -519,6 +514,10 @@
   transition: transform .2s ease;
 }
 
+.accordion-toggle.open .accordion-icon {
+  transform: rotate(90deg);
+}
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -536,7 +535,6 @@
 }
 
 /* Game covers */
-
 .game-cover {
   position: relative;
   overflow: hidden;
