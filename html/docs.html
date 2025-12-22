@@ -6,8 +6,11 @@
   <title>Setup Guide - PS2 Portable Pack</title>
   <meta name="description" content="Complete setup guide for PS2 Portable Pack">
   <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav-animation.css"> <!-- NEW -->
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/ps2-button.css">
+
 </head>
 <body>
   <div id="top"></div>
@@ -102,13 +105,13 @@
               </div>
 
               <div class="hr"></div>
+              <div class="games-section-center">
+                <button type="button" class="btn-ps2 games-mega-btn disabled" id="megaGames" title="Owner: set Games MEGA link in main.js">
+                  <strong class="btn-ps2-content">Download PS2 games x3</strong>
+                </button>
+              </div>
 
-              <button type="button"
-                      class="btn-ps2 games-mega-btn disabled"
-                      id="megaGames"
-                      title="Owner: set Games MEGA link in main.js">
-                <strong class="btn-ps2-content">Download games pack (MEGA)</strong>
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -160,18 +163,18 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>&copy; 2025 MP PS2 Portable Pack</span>
-      <a href="#top" class="back-top" title="Back to top">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 15V5M10 5L5 10M10 5L15 10"
-                stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span>&copy; 2025 MP PS2 Portable Pack</span>
+        <a href="#top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <svg viewBox="0 0 20 20" fill="none">
+            <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
-
+  
   <script src="../js/main.js"></script>
 </body>
 </html>

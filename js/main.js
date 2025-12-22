@@ -9,9 +9,9 @@
   // Configuration
   const CONFIG = {
     MEGA_URLS: {  // Updated to support 3 buttons
-      pcsx2: 'YOUR_PCSX2_MEGA_LINK_HERE',
-      games: 'YOUR_PS2_GAMES_MEGA_LINK_HERE', 
-      saves: 'YOUR_PS2_SAVES_MEGA_LINK_HERE'
+      pcsx2: 'https://mega.nz/folder/LnwxDbqT#xGmn6UqJCvVRxp8_UCX_8g',
+      games: 'https://mega.nz/folder/KqYCWA7Z#x13JB9NzbzHw5FWWuTRxkA', 
+      saves: 'https://mega.nz/folder/byRRFbhK#bbS9m3itfpdGGH_SFuzAZQ'
     },
     NAV_SELECTOR: '#nav-placeholder'
   };

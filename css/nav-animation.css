@@ -1,0 +1,79 @@
+/* Full‑width PS2 dots, centered content */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 10, 18, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Dots layer spans entire viewport, but is independent from content width */
+.topbar-stars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Layer 1 – green/blue */
+.topbar-stars::before {
+  content: "";
+  position: absolute;
+  width: 120vw;
+  height: 420px;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image:
+    radial-gradient(circle, #00ff00 2.2px, transparent 2.2px),
+    radial-gradient(circle, #0080ff 2px, transparent 2px);
+  background-size: 80px 80px, 110px 110px;
+  background-position: 0 0, 40px 40px;
+  opacity: 0.7;
+  animation: topbar-stars-drift-1 10s linear infinite;
+}
+
+/* Layer 2 – blue/red */
+.topbar-stars::after {
+  content: "";
+  position: absolute;
+  width: 120vw;
+  height: 460px;
+  top: -230px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image:
+    radial-gradient(circle, #0080ff 2.4px, transparent 2.4px),
+    radial-gradient(circle, #ff0000 2.2px, transparent 2.2px);
+  background-size: 100px 100px, 130px 130px;
+  background-position: 0 0, 50px 50px;
+  opacity: 0.75;
+  animation: topbar-stars-drift-2 14s linear infinite reverse;
+}
+
+@keyframes topbar-stars-drift-1 {
+  0%   { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-320px); }
+}
+
+@keyframes topbar-stars-drift-2 {
+  0%   { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-360px); }
+}
+
+/* Content stays in centered .wrap exactly like the rest of the page */
+.topbar-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  flex-wrap: wrap;
+}

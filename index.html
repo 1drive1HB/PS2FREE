@@ -7,54 +7,28 @@
   <meta name="description" content="Portable PS2 emulator for Windows. Copy to USB, run anywhere.">
   <link rel="icon" type="image/x-icon" href="assets/faviconPS2web.ico">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav-animation.css"> <!-- NEW -->
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/ps2-button.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/ps2-button.css">
 </head>
 <body>
   <!-- anchor for true page top -->
   <div id="top"></div>
-
   <div id="nav-placeholder"></div>
 
   <main class="wrap">
     <!-- Hero -->
-    <section class="hero" id="download">
-      <!-- <div class="card hero-card hero-main-card">
-        <h2>Portable PS2 emulator</h2>
-        <p>Copy to USB. Run anywhere.</p>
-        <p class="lead hero-lead">
-          Everything is preconfigured. Just select your games folder and connect a controller.
-        </p>
-        <p><b>Play PS2 games on your PC.</b></p>
-        <div class="hr"></div>
-        <div class="cta-row">
-          <button type="button" class="btn-ps2 disabled" id="megaPcsx2"
-                  title="Owner: set PCSX2 MEGA link in main.js">
-            <strong class="btn-ps2-content">Download PS2 Portable</strong>
-            <div id="ps2-stars-container">
-              <div id="ps2-stars"></div>
-            </div>
-            <div id="ps2-glow">
-              <div class="ps2-circle"></div>
-              <div class="ps2-circle"></div>
-              <div class="ps2-circle"></div>
-            </div>
-          </button>
-        </div>
-      </div> -->
+    <section class="hero" id="download">      
       <div class="card side-card">
         <h2>Portable PS2 emulator</h2>
         <p>Copy to USB. Run anywhere.</p>
-
         <p class="lead hero-lead">
           Everything is preconfigured. Select your games folder, and connect a controller.
         </p>
         <p><b>Play PS2 games on your PC.</b></p>
 
         <br>
-        <!-- <div class="hr"></div> -->
-
         <div class="cta-row">
           <button
             type="button"
@@ -189,16 +163,15 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>&copy; 2025 MP PS2 Portable Pack</span>
-      <!-- Back to absolute top -->
-      <a href="#top" class="back-top" title="Back to top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 15V5M10 5L5 10M10 5L15 10"
-                stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+    <div class="wrap">
+      <div class="footer-inner">
+        <span>&copy; 2025 MP PS2 Portable Pack</span>
+        <a href="#top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <svg viewBox="0 0 20 20" fill="none">
+            <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
