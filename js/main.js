@@ -6,15 +6,16 @@
 (function() {
   'use strict';
 
-  // Configuration
-  const CONFIG = {
-    MEGA_URLS: {  // Updated to support 3 buttons
-      pcsx2: 'https://mega.nz/folder/LnwxDbqT#xGmn6UqJCvVRxp8_UCX_8g',
-      games: 'https://mega.nz/folder/KqYCWA7Z#x13JB9NzbzHw5FWWuTRxkA', 
-      saves: 'https://mega.nz/folder/byRRFbhK#bbS9m3itfpdGGH_SFuzAZQ'
-    },
-    NAV_SELECTOR: '#nav-placeholder'
-  };
+  // Configuration loaded from config.js
+  // Make sure config.js is loaded before main.js in HTML
+  if (typeof CONFIG === 'undefined') {
+    console.error('CONFIG not found! Make sure js/config.js is loaded before main.js');
+  }
+  
+  // Add NAV_SELECTOR to config if not present
+  if (CONFIG && !CONFIG.NAV_SELECTOR) {
+    CONFIG.NAV_SELECTOR = '#nav-placeholder';
+  }
 
   /**
    * Fix navigation paths after loading
