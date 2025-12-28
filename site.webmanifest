@@ -1,0 +1,23 @@
+{
+  "name": "PS2 Portable Pack",
+  "short_name": "PS2 Pack",
+  "description": "Portable PS2 emulator for Windows. Copy to USB, run anywhere.",
+  "start_url": "/PS2FREE/",
+  "display": "standalone",
+  "background_color": "#070a12",
+  "theme_color": "#0a2a6a",
+  "icons": [
+    {
+      "src": "assets/Transparent_Logo_app_ps2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/Transparent_Logo_app_ps2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

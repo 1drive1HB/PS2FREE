@@ -30,3 +30,16 @@ build/
 *.log
 AI_RULES.md
 .Trash/
+
+##############################
+
+.rovodev/
+#AGENTS.local.md
+rovo.ps1
+acli.exe
+*.exe
+oldG/
+#AGENTS.md
+.DS_Store
+Thumbs.db
+*.log

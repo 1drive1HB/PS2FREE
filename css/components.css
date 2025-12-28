@@ -65,18 +65,31 @@
 }
 
 .nav a {
-  color: var(--muted);
-  padding: .45rem .6rem;
+  color: var(--text);
+  padding: .6rem .9rem;
   border-radius: 10px;
-  border: 1px solid transparent;
-  transition: all .15s ease;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(10, 42, 106, 0.4), rgba(7, 10, 18, 0.6));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all .2s ease;
   white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .nav a:hover {
   color: var(--text);
-  border-color: var(--line);
-  background: rgba(47, 184, 255, 0.08);
+  border-color: rgba(47, 184, 255, 0.6);
+  background: linear-gradient(135deg, rgba(47, 184, 255, 0.25), rgba(11, 58, 160, 0.4));
+  box-shadow: 
+    0 0 15px rgba(47, 184, 255, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.nav a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Cards */
@@ -270,7 +283,7 @@
 
 /* Footer */
 .footer {
-  margin-top: 2rem;
+  margin-top: auto;
   padding: 1.5rem 0;
   border-top: 1px solid var(--line);
 }
@@ -406,7 +419,7 @@
 .accordion-toggle {
   width: 100%;
   padding: 1.1rem 1.4rem;
-  background: var(--panel);
+  background: var(--panel2);
   border: 1px solid var(--line);
   border-radius: 14px;
   text-align: left;
@@ -430,6 +443,13 @@
   box-shadow: 0 0 20px rgba(47, 184, 255, 0.4);
 }
 
+/* Active state - when accordion is open */
+.accordion-toggle.open {
+  background: var(--panel);
+  border-color: rgba(47, 184, 255, 0.4);
+  box-shadow: 0 0 12px rgba(47, 184, 255, 0.25);
+}
+
 /* Arrow icon (▸) */
 .accordion-icon {
   font-size: 1.1rem;
@@ -437,7 +457,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.22s ease;
+  transition: transform 0.3s ease;
   transform-origin: center;
 }
 

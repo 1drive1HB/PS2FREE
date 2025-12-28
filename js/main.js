@@ -176,14 +176,18 @@
         const content = this.nextElementSibling;
         const isActive = content.classList.contains('active');
         
-        // Close all accordions
+        // Close all accordions (both content and toggle button)
         document.querySelectorAll('.accordion-content').forEach(c => {
           c.classList.remove('active');
         });
+        document.querySelectorAll('.accordion-toggle').forEach(t => {
+          t.classList.remove('open');
+        });
         
-        // Toggle current
+        // Toggle current (both content and toggle button)
         if (!isActive) {
           content.classList.add('active');
+          this.classList.add('open');
         }
       });
     });
