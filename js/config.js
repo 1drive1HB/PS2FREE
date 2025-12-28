@@ -12,7 +12,12 @@ const CONFIG = {
     // PS2 Games Pack (3 games bundle)
     games: 'https://mega.nz/folder/KqYCWA7Z#x13JB9NzbzHw5FWWuTRxkA',
     
-    // Memory Card Saves collection
-    saves: 'https://mega.nz/folder/byRRFbhK#bbS9m3itfpdGGH_SFuzAZQ'
+    // Additional Games (Gun, etc.)
+    additionalGames: 'https://mega.nz/folder/placeholder-additional-gamesGUN!'
+  },
+  
+  // VirusTotal scan links (optional)
+  VIRUSTOTAL_URLS: {
+    pcsx2: 'https://www.virustotal.com/gui/url/placeholder'
   }
 };

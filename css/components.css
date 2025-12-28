@@ -186,6 +186,11 @@
   border-color: rgba(47, 184, 255, 0.6);
 }
 
+.btn-link-style {
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+}
+
 .btn.disabled {
   opacity: .55;
   cursor: not-allowed;
@@ -298,6 +303,68 @@
 
 /* Removed .back-top - replaced with .back-to-top-btn */
 
+/* VirusTotal Links */
+.virustotal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(47, 184, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(47, 184, 255, 0.08);
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.virustotal-link:hover {
+  background: rgba(47, 184, 255, 0.15);
+  border-color: rgba(47, 184, 255, 0.5);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.vt-icon {
+  font-size: 1.2rem;
+}
+
+.virustotal-link-small {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(47, 184, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(47, 184, 255, 0.08);
+  color: var(--muted);
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.virustotal-link-small:hover {
+  background: rgba(47, 184, 255, 0.15);
+  border-color: rgba(47, 184, 255, 0.5);
+  color: var(--text);
+}
+
+/* Download Row */
+.download-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Muted text */
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 /* Docs page */
 .note {
   margin: 1rem 0;
@@ -306,6 +373,14 @@
   border: 1px solid rgba(47, 184, 255, 0.25);
   background: rgba(47, 184, 255, 0.08);
   color: rgba(244, 248, 255, 0.9);
+}
+
+.note-spaced {
+  margin-top: 1.5rem;
+}
+
+.note-text-spaced {
+  margin-top: 0.5rem;
 }
 
 .intro {
@@ -390,10 +465,22 @@
 /* Accordion (Featured games) */
 .accordion {
   margin: 1.5rem 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(8, 12, 24, 0.3);
+}
+
+.accordion-spaced {
+  margin-top: 2rem;
 }
 
 .accordion-item {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.accordion-item:not(:last-child) {
+  border-bottom: 1px solid rgba(47, 184, 255, 0.1);
 }
 
 /* Toggle button */
@@ -451,21 +538,18 @@
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  background: var(--panel2);
-  border-radius: 0 0 14px 14px;
-  border: 1px solid var(--line);
-  border-top: none;
+  background: transparent;
   padding: 0 1.4rem;
   transition:
-    max-height 0.35s ease,
-    padding 0.24s ease,
-    opacity 0.25s ease;
+    max-height 0.4s ease,
+    padding 0.4s ease,
+    opacity 0.3s ease;
   opacity: 0;
 }
 
 .accordion-content.active {
-  max-height: 1000px;
-  padding: 1.2rem 1.4rem 1.4rem;
+  max-height: 2500px;
+  padding: 1.5rem 1.4rem;
   opacity: 1;
 }
 
@@ -475,6 +559,11 @@
   overflow: hidden;
   border-radius: 14px;
   margin-bottom: 1.4rem;
+}
+
+.game-cover a {
+  display: block;
+  text-decoration: none;
 }
 
 .game-cover img {

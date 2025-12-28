@@ -2,13 +2,13 @@
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10000;
   background: rgba(7, 10, 18, 0.85);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
   isolation: isolate;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Dots layer spans entire viewport, but is independent from content width */
@@ -69,11 +69,129 @@
 /* Content stays in centered .wrap exactly like the rest of the page */
 .topbar-inner {
   position: relative;
-  z-index: 1;
+  z-index: 10001;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem 0;
   flex-wrap: wrap;
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 10002;
+}
+
+.nav-dropdown-toggle {
+  /* Match .nav a styling exactly */
+  display: inline-block;
+  color: var(--text);
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(10, 42, 106, 0.4), rgba(7, 10, 18, 0.6));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all .2s ease;
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Add arrow indicator with CSS */
+.nav-dropdown-toggle::after {
+  content: ' ▾';
+  font-size: 0.85em;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.nav-dropdown.active .nav-dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-toggle:hover {
+  color: var(--text);
+  border-color: rgba(47, 184, 255, 0.6);
+  background: linear-gradient(135deg, rgba(47, 184, 255, 0.25), rgba(11, 58, 160, 0.4));
+  box-shadow: 
+    0 0 15px rgba(47, 184, 255, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Active state when dropdown is open */
+.nav-dropdown.active .nav-dropdown-toggle {
+  color: var(--text);
+  border-color: rgba(47, 184, 255, 0.8);
+  background: linear-gradient(135deg, rgba(47, 184, 255, 0.35), rgba(11, 58, 160, 0.5));
+  box-shadow: 
+    0 0 20px rgba(47, 184, 255, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 200px;
+  background: linear-gradient(135deg, rgba(10, 42, 106, 0.98), rgba(7, 10, 18, 0.98));
+  border: 1px solid rgba(47, 184, 255, 0.4);
+  border-radius: 10px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(47, 184, 255, 0.2);
+  z-index: 10003;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.85rem 1.2rem;
+  color: var(--text);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+}
+
+.nav-dropdown-menu a:hover {
+  background: linear-gradient(135deg, rgba(47, 184, 255, 0.3), rgba(11, 58, 160, 0.5));
+  color: #fff;
+  transform: translateX(4px);
+  box-shadow: inset 0 0 20px rgba(47, 184, 255, 0.2);
+}
+
+.nav-dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid rgba(47, 184, 255, 0.2);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.active .nav-dropdown-menu {
+  display: block;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

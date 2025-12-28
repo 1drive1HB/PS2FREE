@@ -32,7 +32,29 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
+  /* ===== FONT SYSTEM ===== */
+  /* Default: System fonts */
   font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  
+  /* ALTERNATIVE FONTS - Uncomment ONE of these to switch fonts: */
+  
+  /* Option 1: Google Fonts - Orbitron (Futuristic, tech-style) */
+  /* font-family: 'Orbitron', system-ui, sans-serif; */
+  /* To use: Add this in <head>: <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet"> */
+  
+  /* Option 2: Google Fonts - Rajdhani (Modern, gaming-style) */
+  /* font-family: 'Rajdhani', system-ui, sans-serif; */
+  /* To use: Add this in <head>: <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"> */
+  
+  /* Option 3: Google Fonts - Exo 2 (Tech, sci-fi style) */
+  /* font-family: 'Exo 2', system-ui, sans-serif; */
+  /* To use: Add this in <head>: <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet"> */
+  
+  /* Option 4: Monospace (Developer/retro style) */
+  /* font-family: 'Courier New', Courier, monospace; */
+  
+  /* ===== END FONT SYSTEM ===== */
 }
 
 h1, h2, h3 { margin: 0; font-weight: 750; letter-spacing: .3px; }

@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" href="assets/Transparent_Logo_app_ps2.png">
   <link rel="manifest" href="site.webmanifest">
   <!-- <meta name="theme-color" content="#0a2a6a"> -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="PS2 Pack">
   <link rel="stylesheet" href="css/base.css">
@@ -40,12 +40,7 @@
 
         <br>
         <div class="cta-row">
-        <button
-          type="button"
-          class="btn-ps2 disabled"
-          id="megaPcsx2"
-          title="Owner: set PCSX2 MEGA link in main.js"
-        >
+        <button type="button" class="btn-ps2" id="megaPcsx2">
           <strong class="btn-ps2-content">Download PS2 Portable</strong>
 
           <div id="ps2-stars-container">
@@ -74,6 +69,28 @@
           <li><code>pcsx2-qtPortable/</code></li>
           <li><code>ps2Games/</code></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Installation Requirements -->
+    <section id="requirements">
+      <h2 class="section-title">Required Software</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>VCRedist AIO</h3>
+          <p class="muted">Visual C++ Redistributable - All versions</p>
+          <a class="link" href="https://github.com/xyzsteven/VCRedistAIO/blob/main/VCRedist/01.%20INSTALL%20ALL.bat" target="_blank" rel="noopener">
+            Download from GitHub →
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Microsoft .NET Framework 4.8</h3>
+          <p class="muted">Offline installer for Windows</p>
+          <a class="link" href="https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0" target="_blank" rel="noopener">
+            Download from Microsoft →
+          </a>
+        </div>
       </div>
     </section>
 

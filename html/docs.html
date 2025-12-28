@@ -14,7 +14,7 @@
   <link rel="manifest" href="../site.webmanifest">
   <!-- Note: theme-color not supported in Firefox, Firefox Android, Opera -->
   <!-- <meta name="theme-color" content="#0a2a6a"> -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="PS2 Pack">
   
@@ -100,18 +100,24 @@
             <div class="accordion-content">
               <div class="grid-3 games-row">
                 <div class="game-cover">
-                  <img src="../assets/covers/half-life-playstation-2-front-cover.jpg"
-                       alt="Half-Life" loading="lazy">
+                  <a href="https://combineoverwiki.net/wiki/Half-Life_(PlayStation_2_port)" target="_blank" rel="noopener">
+                    <img src="../assets/covers/half-life-playstation-2-front-cover.jpg"
+                         alt="Half-Life" loading="lazy">
+                  </a>
                   <span>Half-Life</span>
                 </div>
                 <div class="game-cover">
-                  <img src="../assets/covers/crazy-taxi-playstation-2-front-cover.jpg"
-                       alt="Crazy Taxi" loading="lazy">
+                  <a href="https://crazy-taxi.fandom.com/wiki/Crazy_Taxi_Wiki" target="_blank" rel="noopener">
+                    <img src="../assets/covers/crazy-taxi-playstation-2-front-cover.jpg"
+                         alt="Crazy Taxi" loading="lazy">
+                  </a>
                   <span>Crazy Taxi</span>
                 </div>
                 <div class="game-cover">
-                  <img src="../assets/covers/tekken-5-playstation-2-front-cover.jpg"
-                       alt="Tekken 5" loading="lazy">
+                  <a href="https://tekken.fandom.com/wiki/Tekken_5" target="_blank" rel="noopener">
+                    <img src="../assets/covers/tekken-5-playstation-2-front-cover.jpg"
+                         alt="Tekken 5" loading="lazy">
+                  </a>
                   <span>Tekken 5</span>
                 </div>
               </div>
@@ -137,6 +143,52 @@
                   </div>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Games Accordion -->
+        <div class="accordion accordion-spaced">
+          <div class="accordion-item">
+            <button class="accordion-toggle">
+              <span class="accordion-icon">▸</span>
+              <span class="accordion-label">Additional Games</span>
+            </button>
+            <div class="accordion-content">
+              <div class="grid-3 games-row">
+                <div class="game-cover">
+                  <a href="https://gunthegame.fandom.com/wiki/GUN" target="_blank" rel="noopener">
+                    <img src="../assets/covers/gun.jpg"
+                         alt="Gun" loading="lazy">
+                  </a>
+                  <span>Gun</span>
+                </div>
+              </div>
+
+              <div class="games-section-center">
+                <button
+                  type="button"
+                  class="btn-ps2 games-mega-btn disabled"
+                  id="megaAdditionalGames"
+                  title="Owner: set Additional Games MEGA link in config.js"
+                >
+                  <strong class="btn-ps2-content">Download Additional Games</strong>
+
+                  <div id="ps2-stars-container">
+                    <div id="ps2-stars"></div>
+                  </div>
+
+                  <div id="ps2-glow">
+                    <div class="ps2-circle"></div>
+                    <div class="ps2-circle"></div>
+                    <div class="ps2-circle"></div>
+                  </div>
+                </button>
+              </div>
+
+              <div class="hr"></div>
+              <h4>Gun on Disc</h4>
+              <p class="muted">Physical disc version also available. Burn ISO to DVD-R using <a href="../html/burning.html" class="link">our burning guide</a>.</p>
             </div>
           </div>
         </div>

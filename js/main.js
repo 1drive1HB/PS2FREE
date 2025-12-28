@@ -39,10 +39,12 @@
       console.warn('Logo element not found');
     }
     
-    // Fix all navigation links
+    // Fix all navigation links (including dropdown items)
     const links = {
       'nav-home': base + 'index.html',
-      'nav-download': base + 'index.html#download',
+      'nav-download-toggle': base + 'index.html#download',
+      'nav-download-emulator': base + 'index.html#download',
+      'nav-download-freegames': base + 'html/docs.html#games',
       'nav-howto': base + 'index.html#howto',
       'nav-docs': base + 'html/docs.html',
       'nav-burning': base + 'html/burning.html',
@@ -106,47 +108,33 @@
   }
 
   /**
-   * Initialize 3 MEGA download buttons
+   * Initialize all MEGA download buttons
    */
   function initMegaButtons() {
-    // 1. PCSX2 button on index.html (id="megaPcsx2")
-    const pcsx2Btn = document.getElementById('megaPcsx2');
-    if (pcsx2Btn) {
-      if (!CONFIG.MEGA_URLS.pcsx2 || CONFIG.MEGA_URLS.pcsx2 === 'YOUR_PCSX2_MEGA_LINK_HERE') {
-        pcsx2Btn.classList.add('disabled');
-        pcsx2Btn.title = 'Owner: set PCSX2 MEGA link in main.js';
-      } else {
-        pcsx2Btn.addEventListener('click', function() {
-          window.open(CONFIG.MEGA_URLS.pcsx2, '_blank', 'noopener,noreferrer');
-        });
-      }
-    }
+    const buttons = [
+      { id: 'megaPcsx2', url: CONFIG.MEGA_URLS.pcsx2 },
+      { id: 'megaGames', url: CONFIG.MEGA_URLS.games },
+      { id: 'megaSaves', url: CONFIG.MEGA_URLS.saves },
+      { id: 'megaAdditionalGames', url: CONFIG.MEGA_URLS.additionalGames },
+      { id: 'downloadFDVDB', url: CONFIG.MEGA_URLS.fdvdb },
+      { id: 'downloadFreeMCBoot', url: CONFIG.MEGA_URLS.freemcboot }
+    ];
 
-    // 2. Games button on docs.html (id="megaGames") 
-    const gamesBtn = document.getElementById('megaGames');
-    if (gamesBtn) {
-      if (!CONFIG.MEGA_URLS.games || CONFIG.MEGA_URLS.games === 'YOUR_PS2_GAMES_MEGA_LINK_HERE') {
-        gamesBtn.classList.add('disabled');
-        gamesBtn.title = 'Owner: set Games MEGA link in main.js';
-      } else {
-        gamesBtn.addEventListener('click', function() {
-          window.open(CONFIG.MEGA_URLS.games, '_blank', 'noopener,noreferrer');
-        });
+    buttons.forEach(btn => {
+      const element = document.getElementById(btn.id);
+      if (element) {
+        if (!btn.url || btn.url.includes('placeholder')) {
+          element.classList.add('disabled');
+          element.title = 'Owner: set download link in config.js';
+        } else {
+          element.classList.remove('disabled');
+          element.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(btn.url, '_blank', 'noopener,noreferrer');
+          });
+        }
       }
-    }
-
-    // 3. Saves button on docs.html (id="megaSaves")
-    const savesBtn = document.getElementById('megaSaves');
-    if (savesBtn) {
-      if (!CONFIG.MEGA_URLS.saves || CONFIG.MEGA_URLS.saves === 'YOUR_PS2_SAVES_MEGA_LINK_HERE') {
-        savesBtn.classList.add('disabled');
-        savesBtn.title = 'Owner: set Saves MEGA link in main.js';
-      } else {
-        savesBtn.addEventListener('click', function() {
-          window.open(CONFIG.MEGA_URLS.saves, '_blank', 'noopener,noreferrer');
-        });
-      }
-    }
+    });
   }
 
   /**
@@ -195,6 +183,28 @@
   }
 
   /**
+   * Initialize navigation dropdown
+   */
+  function initDropdown() {
+    const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    const dropdown = document.querySelector('.nav-dropdown');
+    
+    if (dropdownToggle && dropdown) {
+      dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  /**
    * Initialize all functionality when DOM is ready
    */
   function init() {
@@ -206,6 +216,7 @@
       initMegaButtons();   // NEW: 3 buttons
       initSmoothScroll();
       initAccordions();    // NEW: accordion support
+      initDropdown();      // NEW: dropdown navigation
     }, 200);
   }
 

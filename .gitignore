@@ -34,12 +34,8 @@ AI_RULES.md
 ##############################
 
 .rovodev/
-#AGENTS.local.md
+AGENTS.local.md
 rovo.ps1
 acli.exe
-*.exe
 oldG/
-#AGENTS.md
-.DS_Store
-Thumbs.db
-*.log
+AGENTS.md
