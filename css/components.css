@@ -92,6 +92,18 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
+/* Reduce nav spacing on mobile to fit in 2 rows */
+@media (max-width: 768px) {
+  .nav {
+    gap: 0.5rem;
+  }
+  
+  .nav a {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Cards */
 .card {
   background: var(--panel);
@@ -460,6 +472,13 @@
   padding: 0 .35rem;
   border-radius: 4px;
   background: rgba(0, 100, 200, 0.12);
+}
+
+/* Subsection title for inline sections */
+.subsection-title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 /* Accordion (Featured games) */

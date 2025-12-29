@@ -190,8 +190,10 @@
     const dropdown = document.querySelector('.nav-dropdown');
     
     if (dropdownToggle && dropdown) {
+      // Toggle dropdown on click
       dropdownToggle.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         dropdown.classList.toggle('active');
       });
       
@@ -201,6 +203,14 @@
           dropdown.classList.remove('active');
         }
       });
+      
+      // Prevent dropdown from closing when clicking inside menu
+      const dropdownMenu = dropdown.querySelector('.nav-dropdown-menu');
+      if (dropdownMenu) {
+        dropdownMenu.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
     }
   }
 

@@ -78,6 +78,14 @@
   flex-wrap: wrap;
 }
 
+/* Reduce topbar padding on mobile to fit nav in 2 rows */
+@media (max-width: 768px) {
+  .topbar-inner {
+    gap: 0.5rem;
+    padding: 0.7rem 0;
+  }
+}
+
 /* Dropdown Navigation */
 .nav-dropdown {
   position: relative;
@@ -177,9 +185,10 @@
 
 .nav-dropdown-menu a:not(:last-child) {
   border-bottom: 1px solid rgba(47, 184, 255, 0.2);
+  margin-bottom: 0.5rem;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
+/* Only show dropdown when active class is present (click-only, no hover) */
 .nav-dropdown.active .nav-dropdown-menu {
   display: block;
   animation: dropdownFadeIn 0.2s ease;

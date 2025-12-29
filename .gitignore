@@ -40,3 +40,11 @@ acli.exe
 oldG/
 AGENTS.md
 FONT_GUIDE.md
+
+# Credentials and secrets - NEVER COMMIT THESE
+.rovodev/credentials/
+.rovodev/credentials/.env
+rovoDevCLI_start.ps1
+*.local.ps1
+.env
+*.env

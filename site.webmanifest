@@ -8,15 +8,15 @@
   "theme_color": "#0a2a6a",
   "icons": [
     {
-      "src": "assets/Transparent_Logo_app_ps2.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "assets/faviconPS2web.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/Transparent_Logo_app_ps2.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "assets/faviconPS2web.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon",
       "purpose": "any maskable"
     }
   ]

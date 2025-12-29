@@ -3,13 +3,12 @@
 A portable PlayStation 2 emulator package for Windows with preconfigured settings and integrated tools. 
 Copy to USB, run anywhere—no installation required.
 
-**Live Site:** [https://1drive1hb.github.io/ps2web/](https://1drive1hb.github.io/ps2web/)
+**Live Site:** [https://1drive1hb.github.io/PS2FREE/](https://1drive1hb.github.io/PS2FREE/)
 
 ## Features
 
 - **Fully Portable** - Run from USB drive or any folder
 - **Pre-configured** - PCSX2 emulator ready to use
-- **Memory Card Tools** - myMC included for save file management
 - **Comprehensive Guides** - Setup instructions and disc burning tutorials
 - **PS2-Themed UI** - Nostalgic design with animated navigation
 

@@ -36,7 +36,7 @@ main.wrap { padding: 1.2rem 0 2.2rem; }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1rem;
   justify-items: center;
@@ -70,8 +70,15 @@ main.wrap { padding: 1.2rem 0 2.2rem; }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: 1fr; }
   .hero-card { min-height: unset; }
+}
+
+/* Force 3-column grid to stack vertically on mobile/Android */
+@media (max-width: 768px) {
+  .grid-3 { 
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
 }
 
 /* Mobile: keep fixed button width and center it */
